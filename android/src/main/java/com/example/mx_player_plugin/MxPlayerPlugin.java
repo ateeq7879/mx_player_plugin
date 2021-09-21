@@ -49,9 +49,7 @@ public class MxPlayerPlugin implements MethodCallHandler {
 
     Uri uri = Uri.parse(url);
     Intent vlcIntent = new Intent(Intent.ACTION_VIEW);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.DONUT) {
-        vlcIntent.setPackage("com.playit.videoplayer");
-    }
+
 
     vlcIntent.setDataAndTypeAndNormalize(uri, "video/*");
     vlcIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
